@@ -11,7 +11,7 @@ function initMap() {
     mapTypeId: "terrain",
   });
 
-  const blueCoords = [
+  const OdessaRegion = [
     { lat: 45.203833485480914, lng: 29.699054441451498 },
     { lat: 45.44674876624709, lng: 29.31793373858315 },
     { lat: 45.259019007166046, lng: 28.776528627966435 },
@@ -30,7 +30,7 @@ function initMap() {
     { lat: 46.60800147903854, lng: 31.211814290389995 },
   ];
 
-  const redCoords = [
+  const NikolaevkskayaRegion = [
     { lat: 46.60800147903854, lng: 31.211814290389995 },
     { lat: 46.96531944689737, lng: 31.01955357070556 },
     { lat: 47.04772859284262, lng: 31.294211741683323 },
@@ -51,7 +51,7 @@ function initMap() {
     { lat: 46.37731491999672, lng: 31.799582776282403 },
   ];
 
-  const qwe = [
+  const KhersonRegion = [
     { lat: 46.37731491999672, lng: 31.799582776282403 },
     { lat: 46.66080789176666, lng: 31.97536400570817 },
     { lat: 47.021521291458505, lng: 33.05751719936055 },
@@ -76,10 +76,9 @@ function initMap() {
     { lat: 46.320844207029275, lng: 31.484811281446007 },
   ];
 
-  // Construct a draggable red triangle with geodesic set to true.
   new google.maps.Polygon({
     map,
-    paths: redCoords,
+    paths: NikolaevkskayaRegion,
     strokeColor: "#FF0000",
     strokeOpacity: 0.8,
     strokeWeight: 2,
@@ -89,10 +88,9 @@ function initMap() {
     geodesic: true,
   });
 
-  // Construct a draggable blue triangle with geodesic set to false.
   new google.maps.Polygon({
     map,
-    paths: blueCoords,
+    paths: OdessaRegion,
     strokeColor: "#0000FF",
     strokeOpacity: 0.8,
     strokeWeight: 2,
@@ -104,7 +102,7 @@ function initMap() {
 
   new google.maps.Polygon({
     map,
-    paths: qwe,
+    paths: KhersonRegion,
     strokeColor: "#008000",
     strokeOpacity: 0.8,
     strokeWeight: 2,
